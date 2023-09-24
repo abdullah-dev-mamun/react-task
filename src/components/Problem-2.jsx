@@ -96,7 +96,17 @@ const Problem2 = () => {
           <h4 className="text-center text-uppercase mb-5 text-white font-monospace">
             Contact List
           </h4>
-          <form className="row gy-2 gx-3 align-items-center mb-4">
+          <div className="d-flex justify-content-center gap-3">
+            {renderButtons()}
+            <button
+              onClick={onClose}
+              className="btn btn-lg btn-outline-danger"
+              type="button"
+            >
+              Close
+            </button>
+          </div>
+          <form className="row gy-2 gx-3 align-items-center my-4">
             <div className="col-auto w-50">
               <input
                 name="query"
@@ -130,16 +140,6 @@ const Problem2 = () => {
                 : null}
             </tbody>
           </table>
-          <div className="d-flex justify-content-center gap-3">
-            {renderButtons()}
-            <button
-              onClick={onClose}
-              className="btn btn-lg btn-outline-danger"
-              type="button"
-            >
-              Close
-            </button>
-          </div>
         </div>
       </div>
     );
